@@ -118,5 +118,4 @@
         <attr name="android:entries" />
         <attr name="android:entryValues" />
     </declare-styleable>
-
 </resources>
