@@ -23,4 +23,9 @@
     <dimen name="qs_tile_max_size">120dp</dimen>
     <dimen name="qs_tile_max_padding">10dp</dimen>
     <dimen name="qs_tile_dragged_z">10dp</dimen>
+
+    <!-- Width of the sliding KeyguardSecurityContainer (includes 2x keyguard_security_view_margin) -->
+    <dimen name="pa_security_width">320dp</dimen>
+    <!-- Height of the sliding KeyguardSecurityContainer (includes 2x keyguard_security_view_margin) -->
+    <dimen name="pa_security_height">400dp</dimen>
 </resources>
