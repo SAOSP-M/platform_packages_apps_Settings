@@ -306,4 +306,8 @@
     <string name="clock_date_format_custom">Custom java format</string>
 
     <string name="allow_lights_title">Allow notification lights in do not disturb mode</string>
+
+    <!-- Show notification count -->
+    <string name="status_bar_notif_count_title">Show notification count</string>
+    <string name="status_bar_notif_count_summary">Display the number of pending notifications</string>
 </resources>
