@@ -51,6 +51,7 @@ import android.provider.MediaStore;
 import android.provider.OpenableColumns;
 import android.provider.SearchIndexableResource;
 import android.provider.Settings;
+import android.provider.Settings.Global;
 import android.util.Log;
 
 import com.android.internal.logging.MetricsLogger;
@@ -127,6 +128,7 @@ public class NotificationSettings extends SettingsPreferenceFragment implements 
     private int mRingerMode = -1;
     private SwitchPreference mVolumeLinkNotification;
     private PreferenceCategory mSoundCategory;
+    private Preference mHeadsUp;
 
     private UserManager mUserManager;
 
@@ -187,6 +189,8 @@ public class NotificationSettings extends SettingsPreferenceFragment implements 
         refreshZenAccess();
         updateRingerMode();
         updateEffectsSuppressor();
+
+        mHeadsUp = findPreference(Settings.Global.HEADS_UP_NOTIFICATIONS_ENABLED);
     }
 
     @Override
@@ -211,6 +215,11 @@ public class NotificationSettings extends SettingsPreferenceFragment implements 
                 pref.setEnabled(!isRestricted);
             }
         }
+        
+        boolean headsUpEnabled = Settings.System.getInt(
+                getContentResolver(), Settings.Global.HEADS_UP_NOTIFICATIONS_ENABLED, 1) != 0;
+        mHeadsUp.setSummary(headsUpEnabled
+                ? R.string.summary_heads_up_enabled : R.string.summary_heads_up_disabled);
     }
 
     @Override

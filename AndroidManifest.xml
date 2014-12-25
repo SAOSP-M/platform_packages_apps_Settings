@@ -2171,6 +2171,10 @@
                 android:resource="@id/notification_settings" />
         </activity>
 
+
+        <!-- Heads up notifications -->
+        <activity android:name=".headsup.HeadsUpSettings" />
+
         <!-- "Blacklist settings" UI, used only on voice-capable phone devices. -->
         <activity android:name="Settings$BlacklistSettingsActivity"
                 android:uiOptions="splitActionBarWhenNarrow"
