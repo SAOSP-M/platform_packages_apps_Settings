@@ -371,4 +371,7 @@
     <string name="toast_icon_title">Toast icon</string>
     <string name="summary_toast_icons_enabled">Toast icon badge is enabled</string>
     <string name="summary_toast_icons_disabled">Toast icon badge is disabled</string>
+
+    <string name="qs_advanced_location_title">Advanced location quick settings</string>
+    <string name="qs_advanced_location_summary">Enable advanced settings for location in quick settings</string>
 </resources>
