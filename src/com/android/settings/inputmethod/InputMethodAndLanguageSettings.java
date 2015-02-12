@@ -91,6 +91,7 @@ public class InputMethodAndLanguageSettings extends SettingsPreferenceFragment
     private static String VOLUME_ROCKER_SETTINGS_CATEGORY = "volume_rocker_settings_category";
     // volume cursor control
     private static final String VOLUME_KEY_CURSOR_CONTROL = "volume_key_cursor_control";
+    private static final String SHOW_ENTER_KEY = "show_enter_key";
 
     private int mDefaultInputMethodSelectorVisibility = 0;
     private ListPreference mShowInputMethodSelectorPref;
@@ -109,6 +110,7 @@ public class InputMethodAndLanguageSettings extends SettingsPreferenceFragment
     private InputMethodSettingValuesWrapper mInputMethodSettingValues;
     private DevicePolicyManager mDpm;
     private ListPreference mVolumeKeyCursorControl;
+    private SwitchPreference mShowEnterKey;
 
     @Override
     protected int getMetricsCategory() {
@@ -129,6 +131,11 @@ public class InputMethodAndLanguageSettings extends SettingsPreferenceFragment
                     .getContentResolver(), Settings.System.VOLUME_KEY_CURSOR_CONTROL, 0)));
             mVolumeKeyCursorControl.setSummary(mVolumeKeyCursorControl.getEntry());
         }
+
+	mShowEnterKey = (SwitchPreference) findPreference(SHOW_ENTER_KEY);
+        mShowEnterKey.setChecked(Settings.System.getInt(getContentResolver(),
+                Settings.System.FORMAL_TEXT_INPUT, 0) == 1);
+        mShowEnterKey.setOnPreferenceChangeListener(this);
 
         final Activity activity = getActivity();
         mImm = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
@@ -401,7 +408,11 @@ public class InputMethodAndLanguageSettings extends SettingsPreferenceFragment
             int volumeKeyCursorControlIndex = mVolumeKeyCursorControl.findIndexOfValue(volumeKeyCursorControl);
             mVolumeKeyCursorControl.setSummary(mVolumeKeyCursorControl.getEntries()[volumeKeyCursorControlIndex]);
             return true;
-        }
+	} else if (preference == mShowEnterKey) {
+            Settings.System.putInt(getContentResolver(),
+                Settings.System.FORMAL_TEXT_INPUT, (Boolean) value ? 1 : 0);
+            return true;
+	}
         return false;
     }
 
