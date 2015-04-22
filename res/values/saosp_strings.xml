@@ -304,4 +304,6 @@
     <string name="clock_date_style_lowercase">Lowercase</string>
     <string name="clock_date_style_uppercase">Uppercase</string>
     <string name="clock_date_format_custom">Custom java format</string>
+
+    <string name="allow_lights_title">Allow notification lights in do not disturb mode</string>
 </resources>
