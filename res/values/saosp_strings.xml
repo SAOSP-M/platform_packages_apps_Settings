@@ -170,6 +170,7 @@
     <string name="qs_main_tiles_title">Enlarge first row</string>
     <string name="qs_main_tiles_summary_on">Two main tiles on the first row</string>
     <string name="qs_main_tiles_summary_off">Three or four tiles on each row</string>
+    <string name="quick_settings_reset_message">Reset quick settings tiles?</string>
 
     <!-- Power menu -->
     <string name="power_menu_title">Power menu</string>
