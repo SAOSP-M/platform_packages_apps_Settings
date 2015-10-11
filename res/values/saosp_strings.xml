@@ -15,7 +15,7 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
  <!-- SimpleAOSP build date-->
-   <string name="build_date">SimpleAOSP build date</string>
+   <string name="build_date">SAOSP-M build date</string>
    <string name="build_date_default">2014-01-01-0000</string>
 
 </resources>
