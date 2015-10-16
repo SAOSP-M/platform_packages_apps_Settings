@@ -17,6 +17,9 @@
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
     android:title="@string/notification_drawer_title">
 
+    <PreferenceCategory
+        android:title="@string/qs_category_title">
+
     <com.android.settings.cyanogenmod.SecureSettingSwitchPreference
         android:key="qs_show_brightness_slider"
         android:title="@string/qs_brightness_slider_title_eos"
@@ -33,6 +36,14 @@
         android:key="qs_use_four_columns"
         android:title="@string/qs_four_columns_title"
         android:defaultValue="false" />
+
+    <com.android.settings.cyanogenmod.SecureSettingSwitchPreference
+        android:key="sysui_qs_main_tiles"
+        android:title="@string/qs_main_tiles_title"
+        android:summaryOn="@string/qs_main_tiles_summary_on"
+        android:summaryOff="@string/qs_main_tiles_summary_off"
+        android:defaultValue="true" />
+    </PreferenceCategory>
 </PreferenceScreen>
 
 
