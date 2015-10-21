@@ -27,7 +27,9 @@ import android.media.AudioManager;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.Handler;
+import android.os.SystemProperties;
 import android.os.Vibrator;
+import android.preference.Preference.OnPreferenceChangeListener;
 import android.provider.SearchIndexableResource;
 import android.preference.Preference;
 import android.preference.PreferenceScreen;
@@ -50,7 +52,8 @@ import java.util.Arrays;
 import java.util.List;
 
 public class OtherSoundSettings extends SettingsPreferenceFragment implements
-        Preference.OnPreferenceChangeListener, Indexable {
+       OnPreferenceChangeListener, Indexable {
+
     private static final String TAG = "OtherSoundSettings";
 
     private static final int DEFAULT_ON = 1;
@@ -75,6 +78,11 @@ public class OtherSoundSettings extends SettingsPreferenceFragment implements
     private static final String KEY_VOLBTN_MUSIC_CTRL = "volbtn_music_controls";
 
     private SwitchPreference mVolBtnMusicCtrl;
+
+    private static final String KEY_CAMERA_SOUNDS = "camera_sounds";
+    private static final String PROP_CAMERA_SOUND = "persist.sys.camera-sound";
+
+    private SwitchPreference mCameraSounds;
 
     private static final SettingPref PREF_DIAL_PAD_TONES = new SettingPref(
             TYPE_SYSTEM, KEY_DIAL_PAD_TONES, System.DTMF_TONE_WHEN_DIALING, DEFAULT_ON) {
@@ -214,6 +222,11 @@ public class OtherSoundSettings extends SettingsPreferenceFragment implements
         for (SettingPref pref : PREFS) {
             pref.init(this);
         }
+
+        mCameraSounds = (SwitchPreference) findPreference(KEY_CAMERA_SOUNDS);
+        mCameraSounds.setChecked(SystemProperties.getBoolean(PROP_CAMERA_SOUND, true));
+        mCameraSounds.setOnPreferenceChangeListener(this);
+
     }
 
     @Override
@@ -240,6 +253,10 @@ public class OtherSoundSettings extends SettingsPreferenceFragment implements
             Settings.System.putInt(getContentResolver(),
                     Settings.System.VOLUME_MUSIC_CONTROLS,
                     (Boolean) newValue ? 1 : 0);
+        } else if (KEY_CAMERA_SOUNDS.equals(key)) {
+            final String value = ((Boolean) newValue) ? "1" : "0";
+            SystemProperties.set(PROP_CAMERA_SOUND, value);
+            return true;
         }
         return true;
     }
