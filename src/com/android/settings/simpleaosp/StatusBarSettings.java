@@ -22,6 +22,7 @@ import android.os.Bundle;
 import android.os.UserHandle;
 import android.preference.ListPreference;
 import android.preference.Preference;
+import android.preference.Preference.OnPreferenceChangeListener;
 import android.preference.PreferenceScreen;
 import android.preference.SwitchPreference;
 import android.provider.Settings;
@@ -37,9 +38,13 @@ public class StatusBarSettings extends SettingsPreferenceFragment
 
     private static final String QUICK_PULLDOWN = "quick_pulldown";
     private static final String SHOW_CARRIER_LABEL = "status_bar_show_carrier";
+    private static final String KEY_LOCK_CLOCK = "lock_clock";
+    private static final String KEY_LOCK_CLOCK_PACKAGE_NAME = "com.cyanogenmod.lockclock";
 
     private ListPreference mQuickPulldown;
     private ListPreference mShowCarrierLabel;
+
+    private PreferenceScreen mLockClock;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -71,6 +76,11 @@ public class StatusBarSettings extends SettingsPreferenceFragment
 
         if (!Utils.isVoiceCapable(getActivity())) {
             prefSet.removePreference(mShowCarrierLabel);
+        }
+
+	mLockClock = (PreferenceScreen) findPreference(KEY_LOCK_CLOCK);
+        if (!Utils.isPackageInstalled(getActivity(), KEY_LOCK_CLOCK_PACKAGE_NAME)) {
+            prefSet.removePreference(mLockClock);
         }
     }
 
