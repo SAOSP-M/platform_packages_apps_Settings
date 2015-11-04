@@ -23,13 +23,14 @@
 
     <!-- Generic strings -->
     <string name="ok_string">OK</string>
+    <string name="ok">OK</string>
     <string name="default_string">Par défaut</string>
     <string name="enabled_string">Activé</string>
     <string name="disabled_string">Désactivé</string>
     <string name="general_string">Général</string>
     <string name="reset_string">Réinitialiser</string>
     <string name="empty_string">Aucun</string>
-   <string name="font_size_sample">Exemple</string>
+    <string name="font_size_sample">Exemple</string>
 
     <!-- Profiles -->
     <string name="profile_reset_title">Réinitialiser</string>
@@ -122,4 +123,239 @@
     <string name="display_rotation_90_title">90 degrés</string>
     <string name="display_rotation_180_title">180 degrés</string>
     <string name="display_rotation_270_title">270 degrés</string>
+
+    <!-- Restart SystemUI -->
+    <string name="restart_systemui">Redémarrer l\'interface utilisateur</string>
+
+    <!-- Quick settings quick pull down -->
+    <string name="quick_pulldown_title">Dérouler les paramètres rapides</string>
+    <string name="quick_pulldown_summary">Glisser sur le coté %1$s de la barre de statut affiche les paramètres rapides</string>
+    <string name="quick_pulldown_summary_left">gauche</string>
+    <string name="quick_pulldown_summary_right">droit</string>
+    <string name="quick_pulldown_off">Désactivé</string>
+    <string name="quick_pulldown_left">Gauche</string>
+    <string name="quick_pulldown_right">Droit</string>
+
+    <string name="notification_drawer_title">Volet des paramètres rapides</string>
+
+    <!-- Quick Settings brightness slider -->
+    <string name="qs_brightness_slider_title_eos">Curseur de luminosité</string>
+    <string name="qs_brightness_slider_summary">Afficher un curseur de luminosité dans le panneau des paramètres</string>
+
+    <!-- QuickSettings haptic feedback -->
+    <string name="quick_settings_vibrate_title">Vibrer au toucher</string>
+    <string name="quick_settings_vibrate_summary">Vibrer en touchant les tuiles</string>
+
+    <!-- QuickSettings 4 columns -->
+    <string name="qs_four_columns_title">Afficher 4 tuiles par rangées</string>
+
+    <!-- QuickSettings main tiles -->
+    <string name="qs_category_title">Paramètres rapides</string>
+    <string name="qs_main_tiles_title">Gestion de la première rangée</string>
+    <string name="qs_main_tiles_summary_on">Deux principales tuiles sur la première rangée</string>
+    <string name="qs_main_tiles_summary_off">Trois ou quatre tuiles sur chaque rangées</string>
+
+    <!-- Power menu -->
+    <string name="power_menu_title">Menu d\'alimentation</string>
+    <string name="power_menu_title_summary">Voir ou changer les entrées du menu d\'alimentation</string>
+    <string name="power_menu_reboot_title">Menu de redémarrage</string>
+    <string name="power_menu_screenshot_title">Capture d\'écran</string>
+    <string name="power_menu_airplane_title">Mode avion</string>
+    <string name="power_menu_users_title">Sélecteur d\'utilisateur</string>
+    <string name="power_menu_sound_title">Panneau de son</string>
+
+    <!-- Kill app long-press back -->
+    <string name="kill_app_longpress_back">Tuer l\'application par la touche retour</string>
+    <string name="kill_app_longpress_back_summary">Tuez l\'application au premier plan par un long appui sur la touche retour</string>
+    <!--Back to kill timeout -->
+    <string name="long_press_kill_delay">Délais pour tuer l\'application</string>
+
+    <!--Navigation bar category -->
+    <string name="navigation_bar_title">Barre de navigation</string>
+
+    <!-- Double Tap Navbar to Sleep -->
+    <string name="double_tap_sleep_nav_bar_title">Taper deux fois pour mettre en veille</string>
+    <string name="double_tap_sleep_nav_bar_summary">Taper deux fois dans la barre de navigation pour mettre l\'appareil en veille</string>
+
+    <!-- Double tap-to-sleep -->
+    <string name="double_tap_to_sleep_title">Taper deux fois pour mettre en veille</string>
+    <string name="double_tap_to_sleep_summary">Taper deux fois dans la barre de statut ou dans la zone des trois raccourcis de l\'écran de verrouillage pour éteindre l\'écran</string>
+
+    <!-- Heads up -->
+    <string name="headsup_section_header">Notifications flottantes</string>
+    <string name="heads_up_notifications">Notification flottante</string>
+    <string name="summary_heads_up_enabled">Notifications flottantes activées</string>
+    <string name="summary_heads_up_disabled">Notifications flottantes désactivées</string>
+
+    <!--Status bar carrier -->
+    <string name="show_carrier_title">Libellé opérateur</string>
+    <string name="show_carrier_disabled">Désactivé</string>
+    <string name="show_carrier_keyguard">Opérateur sur le verrouillage</string>
+    <string name="show_carrier_statusbar">Opérateur dans la barre de statut</string>
+    <string name="show_carrier_enabled">Activé</string>
+
+    <!-- Navigation bar -->
+    <string name="navigation_bar_category">Barre de navigation</string>
+    <string name="navbar_enable_bar">Activée</string>
+    <string name="navbar_dimen_summary">Changer la hauteur et la largeur</string>
+    <string name="navbar_dimen_title">Dimensions</string>
+    <string name="navbar_dimensions_reset_message">Réinitialiser toutes les entrées des dimensions par défaut ?</string>
+    <string name="navigation_bar_height_title">Hauteur de la barre de navigation</string>
+    <string name="navigation_bar_height_landscape_title">Hauteur de la barre de navigation en paysage</string>
+    <string name="navigation_bar_width_title">Largeur de la barre de navigation</string>
+    <string name="navigation_bar_size_42_dp_default">42 dp (Par défaut)</string>
+    <string name="navigation_bar_size_36_dp">36 dp</string>
+    <string name="navigation_bar_size_30_dp">30 dp</string>
+    <string name="navigation_bar_size_24_dp">24 dp</string>
+    <string name="navigation_bar_size_48_dp_default">48 dp (Par défaut)</string>
+    <string name="navigation_bar_size_44_dp">44 dp</string>
+    <string name="navigation_bar_size_40_dp">40 dp</string>
+    <string name="navigation_bar_size_42_dp">42 dp</string>
+    <string name="navigation_bar_size_0_dp">0 dp (Cacher)</string>
+
+    <!--- Volume key cursor control -->
+    <string name="volume_rocker_screen_title">Contrôle du volume</string>
+    <string name="volume_key_cursor_control_title">Contrôle du curseur par les touches volume</string>
+    <string name="volume_key_cursor_control_off">Désactivé</string>
+    <string name="volume_key_cursor_control_on">Volume haut/bas déplace le curseur à gauche/droite</string>
+    <string name="volume_key_cursor_control_on_reverse">Volume haut/bas déplace le curseur à droite/gauche</string>
+
+    <!-- Keyboard and Input ASS methods -->
+    <string name="show_enter_key_title">Afficher la touche Entrée</string>
+    <string name="show_enter_key_summary">Forcer le clavier à afficher la touche entrée à la place de la touche émoticône</string>
+
+    <!-- Recents panel settings -->
+    <string name="recents_panel_settings">Panneau des applications récentes</string>
+    <string name="show_clear_all_recents_button_title">Bouton d\'effacement des récents</string>
+    <string name="show_clear_all_recents_button_summary">Afficher le bouton tout effacer sur le panneau récents</string>
+    <string name="recents_clear_all_location_title">Emplacement du bouton d\'effacement</string>
+    <string name="recents_clear_all_location_top_right">En haut à droite</string>
+    <string name="recents_clear_all_location_top_left">En haut à gauche</string>
+    <string name="recents_clear_all_location_bottom_right">En bas à droite</string>
+    <string name="recents_clear_all_location_bottom_left">En bas à gauche</string>
+
+    <!-- Ignore last app when clearing recents -->
+    <string name="recents_clear_all_dismiss_all_title">Effacer toutes les tâches</string>
+    <string name="recents_clear_all_dismiss_all_summary">Inclure la tâche en premier plan lors de l\'effacement</string>
+
+    <!-- Advanced sound category -->
+    <string name="advanced_sound_category">Sons avancés</string>
+
+    <!-- Volume rocker music seek options -->
+    <string name="volbtn_music_controls_title">Contrôle de la musique</string>
+    <string name="volbtn_music_controls_summary">Lorsque l\'écran est éteint, un appui long sur les boutons de volume permet de changer le titre en cours de lecture.</string>
+    <string name="volume_button_toggle_info">Le réveil par le volume doit être désactivé</string>
+
+    <!-- Weather in status bar -->
+    <string name="status_bar_show_weather_title">Afficher la météo</string>
+    <string name="status_bar_show_weather_summary">Afficher la météo au-dessus du panneau de paramètre rapide</string>
+
+    <!--- Lock clock -->
+    <string name="lock_clock_title">Widget Horloge</string>
+    <string name="lock_clock_summary">Afficher ou modifier la façon dont le widget \'cLock\' s\'affiche</string>
+    <string name="weather_clock_title">Météo dans la barre de statut</string>
+
+    <!-- Whether to display IME switcher notifcation -->
+    <string name="ime_switcher_notify">Icône du sélecteur de clavier</string>
+    <string name="ime_switcher_notify_summary">Afficher l\'icône du sélecteur de clavier</string>
+
+    <!-- Color Picker -->
+    <string name="dialog_color_picker">Sélecteur de couleur</string>
+    <string name="press_color_to_apply">Appuyer sur la couleur pour appliquer</string>
+    <string name="arrow_right">→</string>
+    <string name="arrow_down">↓</string>
+    <string name="hex">Hex:</string>
+    <string name="hex_hint">#ff000000</string>
+    <string name="set">Choisir</string>
+    <string name="color_default">Par défaut</string>
+
+    <!-- Status bar | Clock -->
+    <string name="status_bar_clock">Heure et date</string>
+    <string name="status_bar_clock_title">Style de l\'heure et de la date</string>
+    <string name="status_bar_clock_summary">Modifier les diverses options de l\'horloge et de la date</string> 
+    <string name="clock_title_enable">Alignement</string>
+    <string name="clock_enabled">Activée</string>
+    <string name="clock_disabled">Désactivée</string>
+    <string name="status_bar_show_clock_title">Afficher l\'heure et la date</string>
+    <string name="status_bar_am_pm_title">AM / PM</string>
+    <string name="status_bar_am_pm_info">Le format 24 heures est activé</string>
+    <string name="enable_clock_weekday">Jour de la semaine</string>
+    <string name="enable_clock_weekday_summary">Jour de la semaine Abrégé avant l\'heure</string>
+    <string name="right_clock">À droite</string>
+    <string name="center_clock">Centrée</string>
+    <string name="left_clock">À gauche</string>
+    <string name="dont_show">Ne pas afficher</string>
+    <string name="clock_date_display">Date</string>
+    <string name="clock_date_display_summary">Affichage de la date personnalisée avant l\'horloge</string>
+    <string name="clock_date_style">Style de la date</string>
+    <string name="clock_date_position">Position de la date</string>
+    <string name="clock_date_format">Format de la date</string>
+    <string name="clock_date_string_edittext_title">Doit être au format date eg. MM/dd/yy</string>
+    <string name="clock_date_string_edittext_summary">Entrer la chaîne</string>
+    <string name="am_pm_clock_normal">Taille de police normale</string>
+    <string name="clock_date_right">À droite de l\'heure</string>
+    <string name="clock_date_left">À gauche de l\'heure</string>
+    <string name="am_pm_clock_small">Taille de police petite</string>
+    <string name="am_pm_clock_none">Ne pas afficher</string>
+    <string name="clock_date_display_none">Ne pas afficher</string>
+    <string name="clock_date_display_small">Taille de police petite</string>
+    <string name="clock_date_display_normal">Taille de police normale</string>
+    <string name="clock_date_style_normal">Normale</string>
+    <string name="clock_date_style_lowercase">Minuscule</string>
+    <string name="clock_date_style_uppercase">Majuscule</string>
+    <string name="clock_date_format_custom">Personnaliser le format</string>
+
+    <string name="allow_lights_title">Autoriser les lumières de notification en mode zen</string>
+
+    <!-- Show notification count -->
+    <string name="status_bar_notif_count_title">Compteur de notifications</string>
+    <string name="status_bar_notif_count_summary">Afficher le nombre de notifications similaires en attentes</string>
+	
+    <!-- Expanded desktop -->
+    <string name="power_menu_expanded_desktop">Bureau étendu</string>
+    <string name="expanded_hide_nothing">Ne rien cacher</string>
+    <string name="expanded_hide_status">Masquer la barre de statut</string>
+    <string name="expanded_hide_navigation">Masquer la barre de navigation</string>
+    <string name="expanded_hide_both">Tout masquer</string>
+    <string name="expanded_nothing_to_show">Pour ajouter une configuration personnalisée par application du bureau étendu, Régler \'Activé pour tous\' en position arrêt</string>
+    <string name="expanded_desktop_state">État étendu</string>
+    <string name="expanded_enabled_for_all">Activé pour tous</string>
+    <string name="expanded_user_configurable">Configuration utilisateur</string>
+    <string name="expanded_desktop_style">Style du bureau étendu</string>
+    <string name="expanded_desktop_style_description">Choisir le style du bureau étendu par défaut</string>
+    <string name="expanded_desktop_title">Options du bureau étendu</string>
+
+    <!-- Status bar brightness control -->
+    <string name="status_bar_toggle_brightness">Curseur de luminosité</string>
+    <string name="status_bar_toggle_brightness_summary">Régler la luminosité en glissant sur la barre d\'état</string>
+    <string name="status_bar_toggle_info">La luminosité automatique doit être désactivée</string>
+
+    <!-- Network traffic -->
+    <string name="network_traffic_title">Trafic réseau</string>
+    <string name="show_network_traffic_state">Moniteur de trafic sur la barre de statut</string>
+    <string name="network_traffic_summary">Activer les diverses options de trafic réseau dans la barre de statut</string>
+    <string name="show_network_traffic_unit">Afficher l\'unité</string>
+    <string name="show_network_traffic_frequency">Intervalle de mise à jour</string>
+    <string name="show_network_traffic_disable">Désactivée</string>
+    <string name="show_network_traffic_up">Sortant</string>
+    <string name="show_network_traffic_down">Entrant</string>
+    <string name="show_network_traffic_all">Sortant et Entrant</string>
+    <string name="show_network_traffic_bit">Bits par seconde</string>
+    <string name="show_network_traffic_byte">Octets par seconde</string>
+    <string name="show_network_traffic_500">500 ms</string>
+    <string name="show_network_traffic_1000">1000 ms</string>
+    <string name="show_network_traffic_1500">1500 ms</string>
+    <string name="show_network_traffic_2000">2000 ms</string>
+    <string name="network_traffic_autohide">Masquer automatiquement</string>
+    <string name="network_traffic_autohide_summary">Masquer le moniteur lorsqu\'il n\'y a pas d\'activité</string>
+    <string name="network_traffic_autohide_threshold">Seuil d\'inactivité</string>	
+
+    <!-- Show/Hide Search Bar -->
+    <string name="recents_show_searchbar">Visibilité de la barre de recherche</string>
+    <string name="recents_searchbar_summary_enabled">La barre de recherche dans le menu récents est activée</string>
+    <string name="recents_searchbar_summary_disabled">La barre de recherche dans le menu récents est désactivées</string>
+
+    <!-- Lockscreen voice or phone -->
+    <string name="lockscreen_voice_title">Raccourci vocal</string>
+    <string name="lockscreen_voice_summary">Activer le raccourci vocal au lieu du téléphone</string>
 </resources>
