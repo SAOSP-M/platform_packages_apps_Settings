@@ -269,42 +269,6 @@
     <string name="set">Choisir</string>
     <string name="color_default">Par défaut</string>
 
-    <!-- Status bar | Clock -->
-    <string name="status_bar_clock">Heure et date</string>
-    <string name="status_bar_clock_title">Style de l\'heure et de la date</string>
-    <string name="status_bar_clock_summary">Modifier les diverses options de l\'horloge et de la date</string> 
-    <string name="clock_title_enable">Alignement</string>
-    <string name="clock_enabled">Activée</string>
-    <string name="clock_disabled">Désactivée</string>
-    <string name="status_bar_show_clock_title">Afficher l\'heure et la date</string>
-    <string name="status_bar_am_pm_title">AM / PM</string>
-    <string name="status_bar_am_pm_info">Le format 24 heures est activé</string>
-    <string name="enable_clock_weekday">Jour de la semaine</string>
-    <string name="enable_clock_weekday_summary">Jour de la semaine Abrégé avant l\'heure</string>
-    <string name="right_clock">À droite</string>
-    <string name="center_clock">Centrée</string>
-    <string name="left_clock">À gauche</string>
-    <string name="dont_show">Ne pas afficher</string>
-    <string name="clock_date_display">Date</string>
-    <string name="clock_date_display_summary">Affichage de la date personnalisée avant l\'horloge</string>
-    <string name="clock_date_style">Style de la date</string>
-    <string name="clock_date_position">Position de la date</string>
-    <string name="clock_date_format">Format de la date</string>
-    <string name="clock_date_string_edittext_title">Doit être au format date eg. MM/dd/yy</string>
-    <string name="clock_date_string_edittext_summary">Entrer la chaîne</string>
-    <string name="am_pm_clock_normal">Taille de police normale</string>
-    <string name="clock_date_right">À droite de l\'heure</string>
-    <string name="clock_date_left">À gauche de l\'heure</string>
-    <string name="am_pm_clock_small">Taille de police petite</string>
-    <string name="am_pm_clock_none">Ne pas afficher</string>
-    <string name="clock_date_display_none">Ne pas afficher</string>
-    <string name="clock_date_display_small">Taille de police petite</string>
-    <string name="clock_date_display_normal">Taille de police normale</string>
-    <string name="clock_date_style_normal">Normale</string>
-    <string name="clock_date_style_lowercase">Minuscule</string>
-    <string name="clock_date_style_uppercase">Majuscule</string>
-    <string name="clock_date_format_custom">Personnaliser le format</string>
-
     <string name="allow_lights_title">Autoriser les lumières de notification en mode zen</string>
 
     <!-- Show notification count -->
@@ -355,7 +319,24 @@
     <string name="recents_searchbar_summary_enabled">La barre de recherche dans le menu récents est activée</string>
     <string name="recents_searchbar_summary_disabled">La barre de recherche dans le menu récents est désactivées</string>
 
-    <!-- Lockscreen voice or phone -->
-    <string name="lockscreen_voice_title">Raccourci vocal</string>
-    <string name="lockscreen_voice_summary">Activer le raccourci vocal au lieu du téléphone</string>
+    <!-- Status bar - Clock -->
+    <string name="status_bar_clock_category">Heure</string>
+    <string name="status_bar_clock_style_title">Style de l\'heure</string>
+    <string name="status_bar_clock_style_right">À droite</string>
+    <string name="status_bar_clock_style_left">À gauche</string>
+    <string name="status_bar_clock_style_center">Centrée</string>
+    <string name="status_bar_clock_style_hidden">Ne pas afficher</string>
+    <string name="status_bar_am_pm_title">Style AM / PM</string>
+    <string name="status_bar_am_pm_info">Le format 24 heures est activé</string>
+    <string name="status_bar_am_pm_normal">Normal</string>
+    <string name="status_bar_am_pm_small">Petit</string>
+    <string name="status_bar_am_pm_hidden">Caché (par défaut)</string>
+	
+    <!-- Navigation bar -->
+    <string name="navigation_bar_buttons">Touches et arrangement</string>
+    <string name="navigation_bar_settings_summary">Éditer et réarranger les touches de la barre de navigation</string>
+	
+    <!-- Navigation bar cursor -->
+    <string name="navigation_bar_arrow_keys_title">Afficher les touches fléchées lors de la saisie</string>
+    <string name="navigation_bar_arrow_keys_summary">Afficher les touches de curseur gauche et droite lors de la saisie. Remplace le sélecteur de clavier</string>
 </resources>
