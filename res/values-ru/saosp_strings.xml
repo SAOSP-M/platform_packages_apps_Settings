@@ -94,7 +94,6 @@
     <!-- Status bar - Battery -->
     <string name="status_bar_battery_title">Индикатор батареи</string>
     <string name="status_bar_battery_summary">Изменить индикатор батареи</string>
-    <string name="status_bar_battery_style_category">Значки батареи</string>
     <string name="status_bar_battery_style_title">Стиль значка батареи</string>
     <string name="status_bar_battery_style_icon_portrait">Вертикальный значок</string>
     <string name="status_bar_battery_style_icon_landscape">Горизонтальный значок</string>
@@ -291,9 +290,9 @@
     <string name="status_bar_toggle_info">Автоматическая яркость должна быть отключена</string>
 
     <!-- Network traffic -->
-    <string name="network_traffic_title">Сетевой трафик</string>
+    <string name="network_traffic_title">Монитор трафика</string>
     <string name="show_network_traffic_state">Монитор сетевого трафика</string>
-    <string name="network_traffic_summary">Включить различные варианты сетевого трафика в строке состояния</string>
+    <string name="network_traffic_summary">Включить показ монитора сетевого трафика в строке состояния</string>
     <string name="show_network_traffic_unit">Единица измерения</string>
     <string name="show_network_traffic_frequency">Интервал обновления</string>
     <string name="show_network_traffic_disable">Выключено</string>
@@ -315,13 +314,12 @@
     <string name="recents_searchbar_summary_enabled">Панель поиска в меню недавних приложений включена</string>
     <string name="recents_searchbar_summary_disabled">Панель поиска в меню недавних приложений отключена</string>
 
-    <!-- Lockscreen voice or phone -->
-    <string name="lockscreen_voice_title">Голосовой ярлык</string>
-    <string name="lockscreen_voice_summary">Включает голосовой ярлык вместо ярлыка звонилки</string>
-    
     <!-- Status bar - Clock -->
     <string name="status_bar_clock_category">Часы</string>
     <string name="status_bar_clock_style_title">Стиль часов</string>
+    <string name="status_bar_clock_title">Стиль часов и даты</string>
+    <string name="status_bar_clock">Часы и дата</string>
+    <string name="status_bar_clock_summary">Изменить различные параметры часов и даты</string>
     <string name="status_bar_clock_style_right">Справа</string>
     <string name="status_bar_clock_style_left">Слева</string>
     <string name="status_bar_clock_style_center">По центру</string>
@@ -330,5 +328,38 @@
     <string name="status_bar_am_pm_info">Включен 24-часовой формат времени</string>
     <string name="status_bar_am_pm_normal">Обычный</string>
     <string name="status_bar_am_pm_small">Маленький</string>
-    <string name="status_bar_am_pm_hidden">Не показывать (по умолч.)</string>
+    <string name="status_bar_am_pm_hidden">Не показывать (по умолч.)</string> 
+
+    <!--Status bar date -->
+    <string name="status_bar_date_title">Дата</string>
+    <string name="status_bar_date_none">Не показывать (по умолч.)</string>
+    <string name="status_bar_date_small">Маленький размер</string>
+    <string name="status_bar_date_normal">Обычный размер</string>
+    <string name="status_bar_date_format_title">Формат даты</string>
+    <string name="status_bar_date_style">Стиль даты</string>
+    <string name="status_bar_date_style_normal">Обычный</string>
+    <string name="status_bar_date_style_lowercase">Строчный</string>
+    <string name="status_bar_date_style_uppercase">Прописной</string>
+    <string name="status_bar_date_format_custom">Пользовательский формат</string>
+    <string name="status_bar_date_string_edittext_title">Формат даты: ММ/дд/гг</string>
+    <string name="status_bar_date_string_edittext_summary">Строка ввода</string>
+    
+    <!-- Nav bar customization -->
+    <string name="navigation_bar_buttons">Кнопки и их расположение</string>
+    <string name="navigation_bar_settings_summary">Редактирование и перемещение кнопок панели навигации</string>
+    <string name="navigation_bar_help_text">Для разблокировки панели навигации и начала редактирования коснитесь значка правки.\n\nКоснитесь виртуальной кнопки для изменения функции или удерживайте ее для перемещения.\n\nПосле этого нажмите «Сохранить» для подтверждения изменений или «Восстановить», чтобы вернуть стандартные настройки.</string>
+    <string name="navigation_restore_button_text">Восстановить</string>
+    <string name="navigation_edit_button_text">Изменить</string>
+    <string name="navigation_save_button_text">Сохранить</string>
+    <string name="navigation_bar_reset_message">Удалить текущие настройки и восстановить стандартный набор?</string>
+
+    <!-- Navigation bar cursor -->
+    <string name="navigation_bar_arrow_keys_title">Перемещение курсора</string>
+    <string name="navigation_bar_arrow_keys_summary">Отображать кнопки перемещения курсора влево или вправо при вводе. Кнопка выбора метода ввода отображаться не будет.</string>
+    
+    <string name="lockscreen_targets_summary">Настройка ярлыков экрана блокировки</string>
+    
+    <!-- Qucik unlock -->
+    <string name="unlock_quick_unlock_control_title">Быстрая разблокировка</string>
+    <string name="unlock_quick_unlock_control_summary">Разблокировать автоматически, если введён корректный PIN-код</string>
 </resources>
