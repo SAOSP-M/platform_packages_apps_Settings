@@ -344,4 +344,6 @@
     <!-- Navigation bar cursor -->
     <string name="navigation_bar_arrow_keys_title">Show arrow keys while typing</string>
     <string name="navigation_bar_arrow_keys_summary">Display left and right cursor buttons while typing. Overrides IME switcher.</string>
+
+    <string name="lockscreen_targets_summary">View or change lock screen shortcuts</string>
 </resources>

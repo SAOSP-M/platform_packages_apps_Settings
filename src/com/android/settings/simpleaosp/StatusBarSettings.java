@@ -40,14 +40,12 @@ public class StatusBarSettings extends SettingsPreferenceFragment
         implements Preference.OnPreferenceChangeListener {
 
     private static final String QUICK_PULLDOWN = "quick_pulldown";
-    private static final String SHOW_CARRIER_LABEL = "status_bar_show_carrier";
     private static final String STATUS_BAR_CLOCK_STYLE = "status_bar_clock";
     private static final String STATUS_BAR_AM_PM = "status_bar_am_pm";
     private static final String KEY_LOCK_CLOCK = "lock_clock";
     private static final String KEY_LOCK_CLOCK_PACKAGE_NAME = "com.cyanogenmod.lockclock";
 
     private ListPreference mQuickPulldown;
-    private ListPreference mShowCarrierLabel;
     private ListPreference mStatusBarClock;
     private ListPreference mStatusBarAmPm;
     private PreferenceScreen mLockClock;
@@ -71,18 +69,6 @@ public class StatusBarSettings extends SettingsPreferenceFragment
                 Settings.System.QS_QUICK_PULLDOWN, 0, UserHandle.USER_CURRENT);
         mQuickPulldown.setValue(String.valueOf(quickPulldownValue));
         mQuickPulldown.setSummary(mQuickPulldown.getEntry());
-
-        mShowCarrierLabel =
-                (ListPreference) findPreference(SHOW_CARRIER_LABEL);
-        int showCarrierLabel = Settings.System.getIntForUser(resolver,
-                Settings.System.STATUS_BAR_SHOW_CARRIER, 1, UserHandle.USER_CURRENT);
-        mShowCarrierLabel.setValue(String.valueOf(showCarrierLabel));
-        mShowCarrierLabel.setSummary(mShowCarrierLabel.getEntry());
-        mShowCarrierLabel.setOnPreferenceChangeListener(this);
-
-        if (!Utils.isVoiceCapable(getActivity())) {
-            prefSet.removePreference(mShowCarrierLabel);
-        }
 
 	mLockClock = (PreferenceScreen) findPreference(KEY_LOCK_CLOCK);
 
@@ -138,14 +124,7 @@ public class StatusBarSettings extends SettingsPreferenceFragment
             Settings.System.putIntForUser(resolver, Settings.System.QS_QUICK_PULLDOWN,
                     quickPulldownValue, UserHandle.USER_CURRENT);
             mQuickPulldown.setSummary(mQuickPulldown.getEntries()[index]);
-            return true;
-        } else if (preference == mShowCarrierLabel) {
-            int showCarrierLabel = Integer.valueOf((String) newValue);
-            int index = mShowCarrierLabel.findIndexOfValue((String) newValue);
-            Settings.System.putIntForUser(resolver, Settings.System.
-                STATUS_BAR_SHOW_CARRIER, showCarrierLabel, UserHandle.USER_CURRENT);
-            mShowCarrierLabel.setSummary(mShowCarrierLabel.getEntries()[index]);
-            return true;      
+            return true; 
         } else if (preference == mStatusBarClock) {
             int clockStyle = Integer.parseInt((String) newValue);
             int index = mStatusBarClock.findIndexOfValue((String) newValue);
