@@ -5,6 +5,11 @@
     xmlns:settings="http://schemas.android.com/apk/res/com.android.settings"
     android:title="@string/navigation_bar_title">
 
+        <Preference
+            android:key="aosp_navbar_settings"
+            android:fragment="com.android.settings.custom.nav.NavbarSettings"
+            android:title="@string/aosp_navigation_bar" />
+
 	<PreferenceCategory
 	    android:key="recents_panel"
 	    android:title="@string/recents_panel_settings" >
