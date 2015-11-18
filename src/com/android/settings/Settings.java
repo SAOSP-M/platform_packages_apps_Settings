@@ -123,4 +123,5 @@ public class Settings extends SettingsActivity {
     public static class DisplayRotationSettingsActivity extends SettingsActivity { /* empty */ }
     public static class BlacklistSettingsActivity extends SettingsActivity { /* empty */ }
     public static class QSSettingsActivity extends SettingsActivity { /* empty */ }
+    public static class BatteryBarSettingsActivity extends SettingsActivity { /* empty */ }
 }
