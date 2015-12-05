@@ -98,7 +98,6 @@
     <!-- Status bar - Battery -->
     <string name="status_bar_battery_title">Icônes batterie</string>
     <string name="status_bar_battery_summary">Changer l\'icône batterie</string>
-    <string name="status_bar_battery_style_category">Icône batterie</string>
     <string name="status_bar_battery_style_title">Style du niveau de batterie</string>
     <string name="status_bar_battery_style_icon_portrait">Icône portrait</string>
     <string name="status_bar_battery_style_icon_landscape">Icône paysage</string>
@@ -320,8 +319,11 @@
     <string name="recents_searchbar_summary_disabled">La barre de recherche dans le menu récents est désactivées</string>
 
     <!-- Status bar - Clock -->
-    <string name="status_bar_clock_category">Heure</string>
-    <string name="status_bar_clock_style_title">Style de l\'heure</string>
+    <string name="status_bar_clock_category">Horloge</string>
+    <string name="status_bar_clock_style_title">Style de l\'horloge</string>
+    <string name="status_bar_clock_title">Style de l\'horloge et de la date</string>
+    <string name="status_bar_clock">Horloge et date</string>
+    <string name="status_bar_clock_summary">Changer les diverses options de l\'heure &amp; de la date</string>
     <string name="status_bar_clock_style_right">À droite</string>
     <string name="status_bar_clock_style_left">À gauche</string>
     <string name="status_bar_clock_style_center">Centrée</string>
@@ -332,11 +334,41 @@
     <string name="status_bar_am_pm_small">Petit</string>
     <string name="status_bar_am_pm_hidden">Caché (par défaut)</string>
 	
-    <!-- Navigation bar -->
+    <!--Status bar date -->
+    <string name="status_bar_date_title">Date</string>
+    <string name="status_bar_date_none">Cachée (par défaut)</string>
+    <string name="status_bar_date_small">Petite</string>
+    <string name="status_bar_date_normal">Normale</string>
+    <string name="status_bar_date_format_title">Format de la date</string>
+    <string name="status_bar_date_style">Style de la date</string>
+    <string name="status_bar_date_style_normal">Normal</string>
+    <string name="status_bar_date_style_lowercase">Minuscule</string>
+    <string name="status_bar_date_style_uppercase">Majuscule</string>
+    <string name="status_bar_date_format_custom">Format java personnalisé</string>
+    <string name="status_bar_date_string_edittext_title">Doit être au format date, ex. JJ/MM/AA</string>
+    <string name="status_bar_date_string_edittext_summary">Entrer une valeur</string>
+	
+    <!-- Nav bar customization -->
     <string name="navigation_bar_buttons">Touches et arrangement</string>
     <string name="navigation_bar_settings_summary">Éditer et réarranger les touches de la barre de navigation</string>
-	
+    <string name="navigation_bar_help_text">Pour commencer appuyez sur l\'icône d\'édition pour déverrouiller la barre de navigation pour l\'édition.\n\nVous pouvez appuyer sur une icône pour modifier son raccourci, ou appuyez longuement sur une icône pour réorganiser la mise en page.\n\nAppuyez sur Enregistrer pour valider vos modifications, ou restaurer pour réinitialiser la configuration aux réglages par défaut.</string>
+    <string name="navigation_restore_button_text">Restaurer\npar défauts</string>
+    <string name="navigation_edit_button_text">Éditer</string>
+    <string name="navigation_save_button_text">Sauver</string>
+    <string name="navigation_bar_reset_message">Supprimer les paramètres actuels et restaurer la disposition par défaut ?</string>
+
     <!-- Navigation bar cursor -->
     <string name="navigation_bar_arrow_keys_title">Afficher les touches fléchées lors de la saisie</string>
     <string name="navigation_bar_arrow_keys_summary">Afficher les touches de curseur gauche et droite lors de la saisie. Remplace le sélecteur de clavier</string>
+
+    <string name="lockscreen_targets_summary">Voir ou changer les raccourcis de l\'écran de verrouillage</string>
+
+    <!-- Qucik unlock -->
+    <string name="unlock_quick_unlock_control_title">Déverrouillage rapide</string>
+    <string name="unlock_quick_unlock_control_summary">Déverrouiller automatiquement l\'appareil lorsque le bon code PIN ou mot de passe est saisi</string>
+
+    <!-- Toast Icons -->
+    <string name="toast_icon_title">Icône notification</string>
+    <string name="summary_toast_icons_enabled">L\'icône sur la notification est activée</string>
+    <string name="summary_toast_icons_disabled">L\'icône sur la notification est désactivée</string>
 </resources>
