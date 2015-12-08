@@ -367,4 +367,10 @@
     <string name="toast_icon_title">Значок всплывающего сообщения</string>
     <string name="summary_toast_icons_enabled">Значок включен</string>
     <string name="summary_toast_icons_disabled">Значок отключен</string>
+    
+    <string name="qs_advanced_location_title">Расширенные настройки местоположения</string>
+    <string name="qs_advanced_location_summary">Включить расширенные настройки для местоположения в быстрых настройках</string>
+    
+    <!-- WiFi auto-configure priorities -->
+    <string name="wifi_auto_config_priorities">Автоматический приоритет</string>
 </resources>
