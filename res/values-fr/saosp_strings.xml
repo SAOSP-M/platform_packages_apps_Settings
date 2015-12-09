@@ -371,4 +371,10 @@
     <string name="toast_icon_title">Icône notification</string>
     <string name="summary_toast_icons_enabled">L\'icône sur la notification est activée</string>
     <string name="summary_toast_icons_disabled">L\'icône sur la notification est désactivée</string>
+
+    <string name="qs_advanced_location_title">Activer la localisation avancée</string>
+    <string name="qs_advanced_location_summary">Activer les paramètres avancés sur la tuile localisation</string>
+
+    <!-- WiFi auto-configure priorities -->
+    <string name="wifi_auto_config_priorities">Priorité automatique</string>
 </resources>
