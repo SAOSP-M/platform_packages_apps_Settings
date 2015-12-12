@@ -21,13 +21,26 @@ import com.android.internal.logging.MetricsLogger;
 
 import com.android.settings.R;
 import com.android.settings.SettingsPreferenceFragment;
+import com.android.settings.cyanogenmod.qs.QSTiles;
 
 public class NotificationDrawerSettings extends SettingsPreferenceFragment {
+
+    private Preference mQSTiles;
 
     @Override
     public void onCreate(Bundle icicle) {
         super.onCreate(icicle);
         addPreferencesFromResource(R.xml.notification_drawer_settings);
+        mQSTiles = findPreference("qs_order");
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+
+        int qsTileCount = QSTiles.determineTileCount(getActivity());
+        mQSTiles.setSummary(getResources().getQuantityString(R.plurals.qs_tiles_summary,
+                    qsTileCount, qsTileCount));
     }
 
     @Override
