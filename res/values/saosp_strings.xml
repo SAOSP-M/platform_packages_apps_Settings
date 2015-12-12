@@ -427,9 +427,7 @@
     <string name="link_volume_option_title">Link ring and notification volume</string>
     <string name="notification_volume_option_title">Notification volume</string>
     <string name="ring_notification_volume_option_title">Ring and notification volume</string>
- 
-    <string name="quick_settings_title">Quick Settings</string>
-    <string name="quick_settings_summary">Configure quick settings tiles</string>
+
     <string name="status_bar_icon_blacklist_title">Status bar icons</string>
     <string name="status_bar_icon_blacklist_summary">Configure what icons are shown on status bar</string>
 </resources>
