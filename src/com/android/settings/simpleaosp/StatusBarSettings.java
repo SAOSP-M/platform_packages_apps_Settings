@@ -16,6 +16,8 @@
 package com.android.settings.simpleaosp;
 
 import android.content.ContentResolver;
+import android.content.Context;
+import android.content.res.Resources;
 import android.os.Bundle;
 import android.os.UserHandle;
 import android.preference.ListPreference;
@@ -37,11 +39,9 @@ public class StatusBarSettings extends SettingsPreferenceFragment
     private static final String QUICK_PULLDOWN = "quick_pulldown";
     private static final String KEY_LOCK_CLOCK = "lock_clock";
     private static final String KEY_LOCK_CLOCK_PACKAGE_NAME = "com.cyanogenmod.lockclock";
-    private static final String KEY_STATUS_BAR_CLOCK = "clock_style_pref";
 
     private ListPreference mQuickPulldown;
     private PreferenceScreen mLockClock;
-    private PreferenceScreen mClockStyle;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -56,9 +56,6 @@ public class StatusBarSettings extends SettingsPreferenceFragment
         PreferenceScreen prefSet = getPreferenceScreen();
         ContentResolver resolver = getActivity().getContentResolver();
 
-        mClockStyle = (PreferenceScreen) prefSet.findPreference(KEY_STATUS_BAR_CLOCK);
-        updateClockStyleDescription();
-
         mQuickPulldown = (ListPreference) prefSet.findPreference(QUICK_PULLDOWN);
         mQuickPulldown.setOnPreferenceChangeListener(this);
         int quickPulldownValue = Settings.System.getIntForUser(resolver,
@@ -67,8 +64,6 @@ public class StatusBarSettings extends SettingsPreferenceFragment
         mQuickPulldown.setSummary(mQuickPulldown.getEntry());
 
 	mLockClock = (PreferenceScreen) findPreference(KEY_LOCK_CLOCK);
-
-        mLockClock = (PreferenceScreen) findPreference(KEY_LOCK_CLOCK);
         if (!Utils.isPackageInstalled(getActivity(), KEY_LOCK_CLOCK_PACKAGE_NAME)) {
             prefSet.removePreference(mLockClock);
         }
@@ -82,13 +77,11 @@ public class StatusBarSettings extends SettingsPreferenceFragment
     @Override
     public void onResume() {
         super.onResume();
-        updateClockStyleDescription();
     }
 
     @Override
     public boolean onPreferenceChange(Preference preference, Object newValue) {
         ContentResolver resolver = getContentResolver();
-
         if (preference == mQuickPulldown) {
             int quickPulldownValue = Integer.valueOf((String) newValue);
             int index = mQuickPulldown.findIndexOfValue((String) newValue);
@@ -99,17 +92,5 @@ public class StatusBarSettings extends SettingsPreferenceFragment
         }
         return false;
     }
-
-    private void updateClockStyleDescription() {
-        if (mClockStyle == null) {
-            return;
-        }
-       int clockStyle = Settings.System.getInt(getActivity()
-                .getContentResolver(), Settings.System.STATUS_BAR_CLOCK, 1);
-        if (clockStyle == 0) {
-            mClockStyle.setSummary(getString(R.string.disabled_string));
-        } else {
-            mClockStyle.setSummary(getString(R.string.enabled_string));
-         }
-    }
 }
+
