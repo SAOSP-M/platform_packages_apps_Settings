@@ -94,6 +94,7 @@
     <!-- Status bar - Battery -->
     <string name="status_bar_battery_title">Индикатор батареи</string>
     <string name="status_bar_battery_summary">Изменить индикатор батареи</string>
+    <string name="status_bar_battery_style_category">Значок батареи</string>
     <string name="status_bar_battery_style_title">Стиль значка батареи</string>
     <string name="status_bar_battery_style_icon_portrait">Вертикальный значок</string>
     <string name="status_bar_battery_style_icon_landscape">Горизонтальный значок</string>
@@ -263,6 +264,42 @@
     <string name="hex_hint">#ff000000</string>
     <string name="set">Выбрать</string>
     <string name="color_default">По умолчанию</string>
+    
+    <!-- Status bar | Clock -->
+    <string name="status_bar_clock">Часы и дата</string>
+    <string name="status_bar_clock_title">Стиль часов и даты</string>
+    <string name="status_bar_clock_summary">Изменить параметры часов и даты</string> 
+    <string name="clock_title_enable">Расположение</string>
+    <string name="clock_enabled">Включены</string>
+    <string name="clock_disabled">Отключены</string>
+    <string name="status_bar_show_clock_title">Показывать часы и дату</string>
+    <string name="status_bar_am_pm_title">AM/PM</string>
+    <string name="status_bar_am_pm_info">Включен 24-часовой формат времени</string>
+    <string name="enable_clock_weekday">День недели</string>
+    <string name="enable_clock_weekday_summary">Показывать день недели перед временем</string>
+    <string name="right_clock">Часы справа</string>
+    <string name="center_clock">Часы по центру</string>
+    <string name="left_clock">Часы слева</string>
+    <string name="dont_show">Не показывать</string>
+    <string name="clock_date_display">Дата</string>
+    <string name="clock_date_display_summary">Показывать дату перед часами</string>
+    <string name="clock_date_style">Стиль даты</string>
+    <string name="clock_date_position">Расположение даты</string>
+    <string name="clock_date_format">Формат даты</string>
+    <string name="clock_date_string_edittext_title">Должно быть в формате даты прим. ММ/дд/гг</string>
+    <string name="clock_date_string_edittext_summary">Строка ввода</string>
+    <string name="am_pm_clock_normal">Нормальный размер</string>
+    <string name="clock_date_right">Справа от часов</string>
+    <string name="clock_date_left">Слева от часов</string>
+    <string name="am_pm_clock_small">Маленький размер</string>
+    <string name="am_pm_clock_none">Не показывать</string>
+    <string name="clock_date_display_none">Не показывать</string>
+    <string name="clock_date_display_small">Маленький размер</string>
+    <string name="clock_date_display_normal">Нормальный размер</string>
+    <string name="clock_date_style_normal">Нормальный</string>
+    <string name="clock_date_style_lowercase">Строчный</string>
+    <string name="clock_date_style_uppercase">Прописной</string>
+    <string name="clock_date_format_custom">Пользовательский формат</string>
 
     <string name="allow_lights_title">Разрешить индикатор уведомлений в режиме «Не беспокоить»</string>
 
@@ -314,36 +351,6 @@
     <string name="recents_searchbar_summary_enabled">Панель поиска в меню недавних приложений включена</string>
     <string name="recents_searchbar_summary_disabled">Панель поиска в меню недавних приложений отключена</string>
 
-    <!-- Status bar - Clock -->
-    <string name="status_bar_clock_category">Часы</string>
-    <string name="status_bar_clock_style_title">Стиль часов</string>
-    <string name="status_bar_clock_title">Стиль часов и даты</string>
-    <string name="status_bar_clock">Часы и дата</string>
-    <string name="status_bar_clock_summary">Изменить различные параметры часов и даты</string>
-    <string name="status_bar_clock_style_right">Справа</string>
-    <string name="status_bar_clock_style_left">Слева</string>
-    <string name="status_bar_clock_style_center">По центру</string>
-    <string name="status_bar_clock_style_hidden">Не показывать часы</string>
-    <string name="status_bar_am_pm_title">Стиль индикатора «AM/PM»</string>
-    <string name="status_bar_am_pm_info">Включен 24-часовой формат времени</string>
-    <string name="status_bar_am_pm_normal">Обычный</string>
-    <string name="status_bar_am_pm_small">Маленький</string>
-    <string name="status_bar_am_pm_hidden">Не показывать (по умолч.)</string> 
-
-    <!--Status bar date -->
-    <string name="status_bar_date_title">Дата</string>
-    <string name="status_bar_date_none">Не показывать (по умолч.)</string>
-    <string name="status_bar_date_small">Маленький размер</string>
-    <string name="status_bar_date_normal">Обычный размер</string>
-    <string name="status_bar_date_format_title">Формат даты</string>
-    <string name="status_bar_date_style">Стиль даты</string>
-    <string name="status_bar_date_style_normal">Обычный</string>
-    <string name="status_bar_date_style_lowercase">Строчный</string>
-    <string name="status_bar_date_style_uppercase">Прописной</string>
-    <string name="status_bar_date_format_custom">Пользовательский формат</string>
-    <string name="status_bar_date_string_edittext_title">Формат даты: ММ/дд/гг</string>
-    <string name="status_bar_date_string_edittext_summary">Строка ввода</string>
-    
     <!-- Nav bar customization -->
     <string name="navigation_bar_buttons">Кнопки и их расположение</string>
     <string name="navigation_bar_settings_summary">Редактирование и перемещение кнопок панели навигации</string>
