@@ -380,4 +380,40 @@
     
     <!-- WiFi auto-configure priorities -->
     <string name="wifi_auto_config_priorities">Автоматический приоритет</string>
+    
+    <!-- Blacklist preferences -->
+    <string name="app_security_title">Безопасность приложений</string>
+    <string name="blacklist_title">Чёрный список</string>
+    <string name="blacklist_edit_dialog_title">Изменить заблокированный номер</string>
+    <string name="blacklist_prefs">Настройки</string>
+    <string name="blacklist_button_delete">Удалить</string>
+    <string name="blacklist_empty_text">Чёрный список пуст. Добавлять контакты можно с помощью кнопки «Добавить (+)».</string>
+    <string name="blacklist_disabled_empty_text">Чтобы предотвратить звонки или сообщения от нежелательных контактов, включите черный список.</string>
+    <string name="blacklist_summary_disabled">Выключен</string>
+    <string name="blacklist_summary">Вы не будете получать входящие вызовы или сообщения от телефонных номеров из черного списка</string>
+    <string name="blacklist_notify">Показывать уведомления</string>
+    <string name="blacklist_private_numbers_title">Скрытые номера</string>
+    <string name="blacklist_private_numbers_summary_disabled">Не блокировать вызовы от скрытых номеров</string>
+    <string name="blacklist_private_numbers_summary">Блокировать входящие <xliff:g id="type">%s</xliff:g> от скрытых номеров</string>
+    <string name="blacklist_unknown_numbers_title">Неизвестные номера</string>
+    <string name="blacklist_unknown_numbers_summary_disabled">Не блокировать входящие вызовы от номеров не из списка контактов</string>
+    <string name="blacklist_unknown_numbers_summary">Блокировать входящие <xliff:g id="type">%s</xliff:g> от номеров не из списка контактов</string>
+    <string name="blacklist_summary_type_calls_only">вызовы</string>
+    <string name="blacklist_summary_type_messages_only">сообщения</string>
+    <string name="blacklist_summary_type_calls_and_messages">вызовы и сообщения</string>
+    <string name="blacklist_regex_title">Регулярные выражения</string>
+    <string name="blacklist_regex_summary">Используйте «.» как маску и «*» для повторения. Например, выражение «123.*» будет блокировать номера, начинающиеся с «123», а «.*123.*» — номера, содержащие «123» в любой их части.</string>
+    <string name="blacklist_policy_block_calls">Блокировать входящие вызовы</string>
+    <string name="blacklist_policy_block_messages">Блокировать входящие сообщения</string>
+    <string name="blacklist_bad_number_add">Некорректный номер, добавление невозможно</string>
+
+    <!-- Blacklist management -->
+    <string name="remove_blacklist_number_title">Удалить номер</string>
+    <string name="remove_blacklist_entry">Вы действительно хотите удалить данный номер из чёрного списка?</string>
+    <string name="select_contact">Выбор контакта</string>
+
+    <!-- Linked / unlinked notification volume -->
+    <string name="link_volume_option_title">Связать громкость рингтона и уведомлений</string>
+    <string name="notification_volume_option_title">Громкость уведомлений</string>
+    <string name="ring_notification_volume_option_title">Громкость рингтона и уведомлений</string>
 </resources>
