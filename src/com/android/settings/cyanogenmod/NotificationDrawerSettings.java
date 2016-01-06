@@ -21,6 +21,7 @@ import com.android.internal.logging.MetricsLogger;
 
 import com.android.settings.R;
 import com.android.settings.SettingsPreferenceFragment;
+import android.preference.Preference;
 import com.android.settings.cyanogenmod.qs.QSTiles;
 
 public class NotificationDrawerSettings extends SettingsPreferenceFragment {
