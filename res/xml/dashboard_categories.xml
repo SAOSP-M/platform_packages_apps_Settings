@@ -193,7 +193,7 @@
                 android:id="@+id/location_settings"
                 android:title="@string/location_settings_title"
                 android:fragment="com.android.settings.location.LocationSettings"
-                android:icon="@drawable/ic_settings_location"
+                android:icon="@drawable/ic_settings_location"              
                 />
 
         <!-- Security -->
