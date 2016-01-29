@@ -44,6 +44,7 @@ import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.Switch;
+import android.widget.Toast;
 
 import com.android.settings.R;
 import com.android.settings.SettingsPreferenceFragment;
@@ -67,18 +68,23 @@ public class HeadsUpSettings extends SettingsPreferenceFragment
 
     private static final int DIALOG_DND_APPS = 0;
     private static final int DIALOG_BLACKLIST_APPS = 1;
+    private static final int DIALOG_WHITELIST_APPS = 2;
 
     private PackageListAdapter mPackageAdapter;
     private PackageManager mPackageManager;
     private PreferenceGroup mDndPrefList;
     private PreferenceGroup mBlacklistPrefList;
+    private PreferenceGroup mWhitelistPrefList;
     private Preference mAddDndPref;
     private Preference mAddBlacklistPref;
+    private Preference mAddWhitelistPref;
 
     private String mDndPackageList;
     private String mBlacklistPackageList;
+    private String mWhitelistPackageList;
     private Map<String, Package> mDndPackages;
     private Map<String, Package> mBlacklistPackages;
+    private Map<String, Package> mWhitelistPackages;
 
     private BaseSystemSettingSwitchBar mEnabledSwitch;
     private boolean mLastEnabledState;
@@ -107,14 +113,20 @@ public class HeadsUpSettings extends SettingsPreferenceFragment
         mBlacklistPrefList = (PreferenceGroup) findPreference("blacklist_applications");
         mBlacklistPrefList.setOrderingAsAdded(false);
 
+        mWhitelistPrefList = (PreferenceGroup) findPreference("whitelist_applications");
+        mWhitelistPrefList.setOrderingAsAdded(false);
+
         mDndPackages = new HashMap<String, Package>();
         mBlacklistPackages = new HashMap<String, Package>();
+        mWhitelistPackages = new HashMap<String, Package>();
 
         mAddDndPref = findPreference("add_dnd_packages");
         mAddBlacklistPref = findPreference("add_blacklist_packages");
+        mAddWhitelistPref = findPreference("add_whitelist_packages");
 
         mAddDndPref.setOnPreferenceClickListener(this);
         mAddBlacklistPref.setOnPreferenceClickListener(this);
+        mAddWhitelistPref.setOnPreferenceClickListener(this);
     }
 
     @Override
@@ -196,6 +208,9 @@ public class HeadsUpSettings extends SettingsPreferenceFragment
         builder.setView(list);
         dialog = builder.create();
 
+        final Toast toast = Toast.makeText(getActivity(), R.string.heads_up_contains_key,
+                Toast.LENGTH_SHORT);
+
         switch (id) {
             case DIALOG_DND_APPS:
                 list.setOnItemClickListener(new AdapterView.OnItemClickListener() {
@@ -203,8 +218,12 @@ public class HeadsUpSettings extends SettingsPreferenceFragment
                     public void onItemClick(AdapterView<?> parent,
                             View view, int position, long id) {
                         PackageItem info = (PackageItem) parent.getItemAtPosition(position);
-                        addCustomApplicationPref(info.packageName, mDndPackages);
-                        dialog.cancel();
+                        if (!isPackageAlreadyAdded(info.packageName, true)) {
+                            addCustomApplicationPref(info.packageName, mDndPackages);
+                            dialog.cancel();
+                        } else {
+                            toast.show();
+                        }
                     }
                 });
                 break;
@@ -214,8 +233,27 @@ public class HeadsUpSettings extends SettingsPreferenceFragment
                     public void onItemClick(AdapterView<?> parent,
                             View view, int position, long id) {
                         PackageItem info = (PackageItem) parent.getItemAtPosition(position);
-                        addCustomApplicationPref(info.packageName, mBlacklistPackages);
-                        dialog.cancel();
+                        if (!isPackageAlreadyAdded(info.packageName, false)) {
+                            addCustomApplicationPref(info.packageName, mBlacklistPackages);
+                            dialog.cancel();
+                        } else {
+                            toast.show();
+                        }
+                    }
+                });
+                break;
+            case DIALOG_WHITELIST_APPS:
+                list.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+                    @Override
+                    public void onItemClick(AdapterView<?> parent,
+                            View view, int position, long id) {
+                        PackageItem info = (PackageItem) parent.getItemAtPosition(position);
+                        if (!isPackageAlreadyAdded(info.packageName, false)) {
+                            addCustomApplicationPref(info.packageName, mWhitelistPackages);
+                            dialog.cancel();
+                        } else {
+                            toast.show();
+                        }
                     }
                 });
         }
@@ -267,9 +305,10 @@ public class HeadsUpSettings extends SettingsPreferenceFragment
         }
 
         // Add the Application Preferences
-        if (mDndPrefList != null && mBlacklistPrefList != null) {
+        if (mDndPrefList != null && mBlacklistPrefList != null && mWhitelistPrefList != null) {
             mDndPrefList.removeAll();
             mBlacklistPrefList.removeAll();
+            mWhitelistPrefList.removeAll();
 
             for (Package pkg : mDndPackages.values()) {
                 try {
@@ -288,14 +327,25 @@ public class HeadsUpSettings extends SettingsPreferenceFragment
                     // Do nothing
                 }
             }
+
+            for (Package pkg : mWhitelistPackages.values()) {
+                try {
+                    Preference pref = createPreferenceFromInfo(pkg);
+                    mWhitelistPrefList.addPreference(pref);
+                } catch (PackageManager.NameNotFoundException e) {
+                    // Do nothing
+                }
+            }
         }
 
         // Keep these at the top
         mAddDndPref.setOrder(0);
         mAddBlacklistPref.setOrder(0);
+        mAddWhitelistPref.setOrder(0);
         // Add 'add' options
         mDndPrefList.addPreference(mAddDndPref);
         mBlacklistPrefList.addPreference(mAddBlacklistPref);
+        mWhitelistPrefList.addPreference(mAddWhitelistPref);
     }
 
     @Override
@@ -311,18 +361,17 @@ public class HeadsUpSettings extends SettingsPreferenceFragment
 
         if (preference == mAddBlacklistPref) {
             showDialog(DIALOG_BLACKLIST_APPS);
+        } else if (preference == mAddWhitelistPref) {
+            showDialog(DIALOG_WHITELIST_APPS);
         }
         return true;
     }
 
     private void addCustomApplicationPref(String packageName, Map<String,Package> map) {
-        Package pkg = map.get(packageName);
-        if (pkg == null) {
-            pkg = new Package(packageName);
-            map.put(packageName, pkg);
-            savePackageList(false, map);
-            refreshCustomApplicationPrefs();
-        }
+        Package pkg = new Package(packageName);
+        map.put(packageName, pkg);
+        savePackageList(false, map);
+        refreshCustomApplicationPrefs();
     }
 
     private Preference createPreferenceFromInfo(Package pkg)
@@ -352,6 +401,8 @@ public class HeadsUpSettings extends SettingsPreferenceFragment
                 Settings.System.HEADS_UP_CUSTOM_VALUES);
         final String blacklistString = Settings.System.getString(getContentResolver(),
                 Settings.System.HEADS_UP_BLACKLIST_VALUES);
+        final String whitelistString = Settings.System.getString(getContentResolver(),
+                Settings.System.HEADS_UP_WHITELIST_VALUES);
 
         if (!TextUtils.equals(mDndPackageList, dndString)) {
             mDndPackageList = dndString;
@@ -364,6 +415,13 @@ public class HeadsUpSettings extends SettingsPreferenceFragment
             mBlacklistPackageList = blacklistString;
             mBlacklistPackages.clear();
             parseAndAddToMap(blacklistString, mBlacklistPackages);
+            parsed = true;
+        }
+
+        if (!TextUtils.equals(mWhitelistPackageList, whitelistString)) {
+            mWhitelistPackageList = whitelistString;
+            mWhitelistPackages.clear();
+            parseAndAddToMap(whitelistString, mWhitelistPackages);
             parsed = true;
         }
 
@@ -386,9 +444,14 @@ public class HeadsUpSettings extends SettingsPreferenceFragment
     }
 
     private void savePackageList(boolean preferencesUpdated, Map<String,Package> map) {
-        String setting = map == mDndPackages
-                ? Settings.System.HEADS_UP_CUSTOM_VALUES
-                : Settings.System.HEADS_UP_BLACKLIST_VALUES;
+        String setting;
+        if (map == mDndPackages) {
+            setting = Settings.System.HEADS_UP_CUSTOM_VALUES;
+        } else if (map == mBlacklistPackages) {
+            setting = Settings.System.HEADS_UP_BLACKLIST_VALUES;
+        } else {
+            setting = Settings.System.HEADS_UP_WHITELIST_VALUES;
+        }
 
         List<String> settings = new ArrayList<String>();
         for (Package app : map.values()) {
@@ -396,10 +459,12 @@ public class HeadsUpSettings extends SettingsPreferenceFragment
         }
         final String value = TextUtils.join("|", settings);
         if (preferencesUpdated) {
-            if (TextUtils.equals(setting, Settings.System.HEADS_UP_CUSTOM_VALUES)) {
+            if (map == mDndPackages) {
                 mDndPackageList = value;
-            } else {
+            } else if (map == mBlacklistPackages) {
                 mBlacklistPackageList = value;
+            } else {
+                mWhitelistPackageList = value;
             }
         }
         Settings.System.putString(getContentResolver(), setting, value);
@@ -425,11 +490,12 @@ public class HeadsUpSettings extends SettingsPreferenceFragment
                 (Preference) getPreferenceScreen().getRootAdapter().getItem(position);
 
         if ((mBlacklistPrefList.findPreference(pref.getKey()) != pref)
-                && (mDndPrefList.findPreference(pref.getKey()) != pref)) {
+                && (mDndPrefList.findPreference(pref.getKey()) != pref)
+                && (mWhitelistPrefList.findPreference(pref.getKey()) != pref)) {
             return false;
         }
 
-        if (mAddDndPref == pref || mAddBlacklistPref == pref) {
+        if (mAddDndPref == pref || mAddBlacklistPref == pref || mAddWhitelistPref == pref) {
             return false;
         }
 
@@ -442,6 +508,8 @@ public class HeadsUpSettings extends SettingsPreferenceFragment
                     public void onClick(DialogInterface dialog, int which) {
                         if (mBlacklistPrefList.findPreference(pref.getKey()) == pref) {
                             removeApplicationPref(pref.getKey(), mBlacklistPackages);
+                        } else if (mWhitelistPrefList.findPreference(pref.getKey()) == pref) {
+                            removeApplicationPref(pref.getKey(), mWhitelistPackages);
                         } else if (mDndPrefList.findPreference(pref.getKey()) == pref) {
                             removeApplicationPref(pref.getKey(), mDndPackages);
                         }
@@ -451,5 +519,17 @@ public class HeadsUpSettings extends SettingsPreferenceFragment
 
         builder.show();
         return true;
+    }
+
+    private boolean isPackageAlreadyAdded(String packageName, boolean isDndList) {
+        boolean result = false;
+        if (isDndList) {
+            result = mDndPackages.containsKey(packageName);
+        } else {
+            result = mBlacklistPackages.containsKey(packageName)
+                    || mWhitelistPackages.containsKey(packageName);
+        }
+
+        return result;
     }
 }
