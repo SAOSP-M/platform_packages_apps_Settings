@@ -46,4 +46,7 @@
     <style name="Theme.AppPicker" parent="@android:style/Theme.Material.Light.Dialog" />
     <style name="Theme.SettingsDialog" parent="@android:style/Theme.Material.Light.Dialog.NoActionBar" />
     <style name="Theme.SettingsAlertDialog" parent="@*android:style/Theme.Material.Light.Dialog.Alert" />
+
+    <!-- Style for Notification/Battery light text -->
+    <style name="TextAppearance.LightTimeValue" parent="@android:style/TextAppearance.Material.Caption" />
 </resources>
