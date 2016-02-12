@@ -211,6 +211,14 @@
     <string name="heads_up_notifications">Всплывающие уведомления</string>
     <string name="summary_heads_up_enabled">Всплывающие уведомления включены</string>
     <string name="summary_heads_up_disabled">Всплывающие уведомления выключены</string>
+    <string name="add_heads_up_package">Добавить приложение</string>
+    <string name="add_heads_up_dnd_summary">Не показывать всплывающие уведомления в этих приложениях</string>
+    <string name="add_heads_up_blacklist_summary">Не показывать всплывающие уведомления от этих приложений</string>
+    <string name="add_heads_up_whitelist_summary">Включить всплывающие уведомления от этих приложений</string>
+    <string name="heads_up_dnd_title">Не беспокоить</string>
+    <string name="heads_up_blacklist_title">Черный список</string>
+    <string name="heads_up_whitelist_title">Белый список</string>
+    <string name="heads_up_contains_key">Это приложение уже добавлено в список</string>
 
     <!--Status bar carrier -->
     <string name="show_carrier_title">Название оператора</string>
@@ -448,4 +456,10 @@
     
     <string name="status_bar_icon_blacklist_title">Значки в строке состояния</string>
     <string name="status_bar_icon_blacklist_summary">Настройка видимости значков</string>
+    
+    <!-- Keyguard notifications options -->
+    <string name="app_notification_show_on_keyguard_title">На экране блокировки</string>
+    <string name="app_notification_show_on_keyguard_summary">Показывать уведомления из этого приложения на экране блокировки</string>
+    <string name="app_notification_no_ongoing_on_keyguard_title">Заблокировать постоянные на экране блокир.</string>
+    <string name="app_notification_no_ongoing_on_keyguard_summary">Не показывать постоянные уведомления из этого приложения на экране блокировки</string>
 </resources>
