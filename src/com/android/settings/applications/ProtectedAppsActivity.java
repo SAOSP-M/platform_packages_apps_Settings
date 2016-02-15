@@ -43,8 +43,6 @@ import android.widget.TextView;
 import com.android.settings.R;
 import com.android.settings.cyanogenmod.ProtectedAppsReceiver;
 
-import cyanogenmod.providers.CMSettings;
-
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.HashSet;
@@ -133,8 +131,8 @@ public class ProtectedAppsActivity extends Activity {
     }
 
     private void updateProtectedComponentsList() {
-        String protectedComponents = CMSettings.System.getString(getContentResolver(),
-                CMSettings.Secure.PROTECTED_COMPONENTS);
+        String protectedComponents = Settings.System.getString(getContentResolver(),
+                Settings.Secure.PROTECTED_COMPONENTS);
         protectedComponents = protectedComponents == null ? "" : protectedComponents;
         String [] flattened = protectedComponents.split("\\|");
         mProtectedApps = new HashSet<ComponentName>(flattened.length);
@@ -198,8 +196,8 @@ public class ProtectedAppsActivity extends Activity {
         // the ListView. This can happen if there are components which have been protected
         // but do not respond to the queryIntentActivities for Launcher Category
         ContentResolver resolver = getContentResolver();
-        String hiddenComponents = CMSettings.System.getString(resolver,
-                CMSettings.Secure.PROTECTED_COMPONENTS);
+        String hiddenComponents = Settings.System.getString(resolver,
+                Settings.Secure.PROTECTED_COMPONENTS);
 
         if (hiddenComponents != null && !hiddenComponents.equals("")) {
             for (String flattened : hiddenComponents.split("\\|")) {

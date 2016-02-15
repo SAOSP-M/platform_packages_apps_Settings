@@ -25,19 +25,20 @@ import android.content.pm.PackageManager;
 import android.provider.Settings;
 import android.util.Log;
 
-import static cyanogenmod.content.Intent.ACTION_PROTECTED;
-import static cyanogenmod.content.Intent.ACTION_PROTECTED_CHANGED;
-import static cyanogenmod.content.Intent.EXTRA_PROTECTED_COMPONENTS;
-import static cyanogenmod.content.Intent.EXTRA_PROTECTED_STATE;
-
 import java.util.ArrayList;
 import java.util.HashSet;
 
 public class ProtectedAppsReceiver extends BroadcastReceiver {
     private static final String TAG = "ProtectedAppsReceiver";
 
-    private static final String PROTECTED_APP_PERMISSION = cyanogenmod.platform.Manifest
-            .permission.PROTECTED_APP;
+    private static final String PROTECTED_APP_PERMISSION = "cyanogenmod.permission.PROTECTED_APP";
+    public static final String ACTION_PROTECTED = "cyanogenmod.intent.action.PACKAGE_PROTECTED";
+    public static final String ACTION_PROTECTED_CHANGED =
+            "cyanogenmod.intent.action.PROTECTED_COMPONENT_UPDATE";
+    public static final String EXTRA_PROTECTED_STATE =
+            "cyanogenmod.intent.extra.PACKAGE_PROTECTED_STATE";
+    public static final String EXTRA_PROTECTED_COMPONENTS =
+            "cyanogenmod.intent.extra.PACKAGE_PROTECTED_COMPONENTS";
 
     @Override
     public void onReceive(Context context, Intent intent) {
