@@ -87,7 +87,9 @@
     <color name="security_settings_billing_desc_text_color">#ffffb060</color>
     <!-- Storage Summary Hard colors-->
     <color name="storage_summary_text_color">#ff607d8b</color>
-    <color name="storage_summary_used_text_color">#8a000000</color>
+    <color name="storage_summary_used_text_color">#8a000000</color>  
+
+    <color name="navbar_edit_icon_color">#607d8b</color>
 
     <!-- Color used by notification log view -->
     <color name="theme_primary_dark">#21272b</color>
