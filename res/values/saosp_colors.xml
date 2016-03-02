@@ -106,4 +106,7 @@
     <color name="crypt_keeper_emergency_button_text_color">@color/text_color_white</color>
     <color name="custom_screencolor_buttons_text_color">@color/text_color_white</color>
 
+    <!-- Text Color for single button panel. See: app storage view -->
+    <color name="single_button_panel_button_text_color">@color/text_color_white</color>
+
 </resources>
