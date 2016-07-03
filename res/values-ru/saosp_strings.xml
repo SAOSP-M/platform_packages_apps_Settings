@@ -466,4 +466,19 @@
     <!-- Double tap gesture anywhere on the lock screen put device to sleep -->
     <string name="double_tap_sleep_anywhere_title">Выключение экрана двойным нажатием</string>
     <string name="double_tap_sleep_anywhere_summary">Дважды нажмите в любом месте экрана блокировки чтобы отключить экран</string>
+    
+   <!-- Advanced storage settings -->
+   <string name="storage_advanced_titlebar">Дополнительные настройки</string>
+   <string name="storage_menu_advanced">Дополнительно</string>
+
+   <!-- USB data automatic unlock -->
+   <string name="usb_data_auto_unlock_title">Разблокировать доступ по USB</string>
+   <string name="usb_data_auto_unlock_summary">Разрешать передачу данных по USB (MTP, PTP)</string>
+   <string name="usb_data_auto_unlock_warning_summary">Соединение с ПК будет создавать незащищённые каналы связи. Пароль на экране блокировки отключает эту функцию.\n\nЭто всё ещё экспериментальная функция, используйте с осторожностью.</string>
+
+   <!-- Camera sound switch -->
+   <string name="camera_sounds_title">Звук затвора</string>
+   <string name="camera_shutter_sound_summary_on">Звук затвора камеры включен</string>
+   <string name="camera_shutter_sound_summary_off">Звук затвора камеры отключен</string>
+   <string name="camera_sound_warning_dialog_text">Выключение звука затвора камеры незаконно в некоторых районах! Пожалуйста, проверьте действующее законодательство в вашей стране</string>
 </resources>
