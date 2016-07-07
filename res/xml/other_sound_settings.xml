@@ -82,7 +82,8 @@
     <SwitchPreference
             android:key="camera_sounds"
             android:title="@string/camera_sounds_title"
-            android:summary="@string/camera_sounds_summary"
+            android:summaryOn="@string/camera_shutter_sound_summary_on"
+            android:summaryOff="@string/camera_shutter_sound_summary_off"
             android:defaultValue="true" />
     </PreferenceCategory>
 </PreferenceScreen>
