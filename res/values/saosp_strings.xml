@@ -566,6 +566,8 @@
     <string name="pulse_legacy_mode_advanced_category">Fading blocks mode settings</string>
 
     <!-- SmartBar -->
+    <string name="smartbar_interface">SmartBar</string>
+    <string name="icon_pack_picker_dialog_title">Icon packs</string>
     <string name="smartbar_category">Smartbar</string>
     <string name="smartbar_settings_title">Smartbar settings</string>
     <string name="smartbar_editor_title">Toggle button editor</string>
