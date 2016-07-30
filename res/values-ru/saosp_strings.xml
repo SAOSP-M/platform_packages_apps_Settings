@@ -198,10 +198,6 @@
     <!--Navigation bar category -->
     <string name="navigation_bar_title">Панель навигации</string>
 
-    <!-- Double Tap Navbar to Sleep -->
-    <string name="double_tap_sleep_nav_bar_title">Выключать экран при двойном нажатии</string>
-    <string name="double_tap_sleep_nav_bar_summary">Дважды коснитесь панели навигации, чтобы перевести устройство в спящий режим</string>
-
     <!-- Double tap-to-sleep -->
     <string name="double_tap_to_sleep_title">Выключать экран при двойном нажатии</string>
     <string name="double_tap_to_sleep_summary">Дважды коснитесь строки состояния, чтобы перевести устройство в спящий режим</string>
@@ -226,25 +222,6 @@
     <string name="show_carrier_keyguard">Только на экране блокировки</string>
     <string name="show_carrier_statusbar">Только в строке состояния</string>
     <string name="show_carrier_enabled">Везде</string>
-
-    <!-- Navigation bar -->
-    <string name="navigation_bar_category">Панель навигации</string>
-    <string name="navbar_enable_bar">Включить</string>
-    <string name="navbar_dimen_title">Размеры</string>
-    <string name="navbar_dimen_summary">Изменить высоту и ширину панели навигации</string>
-    <string name="navbar_dimensions_reset_message">Сбросить всё к значениям по умолчанию?</string>
-    <string name="navigation_bar_height_title">Высота панели навигации</string>
-    <string name="navigation_bar_height_landscape_title">Высота панели навигации в ландшафте</string>
-    <string name="navigation_bar_width_title">Ширина панели навигации</string>
-    <string name="navigation_bar_size_42_dp_default">42 dp (по умолч.)</string>
-    <string name="navigation_bar_size_36_dp">36 dp</string>
-    <string name="navigation_bar_size_30_dp">30 dp</string>
-    <string name="navigation_bar_size_24_dp">24 dp</string>
-    <string name="navigation_bar_size_48_dp_default">48 dp (по умолч.)</string>
-    <string name="navigation_bar_size_44_dp">44 dp</string>
-    <string name="navigation_bar_size_40_dp">40 dp</string>
-    <string name="navigation_bar_size_42_dp">42 dp</string>
-    <string name="navigation_bar_size_0_dp">0 dp (выкл.)</string>
 
     <!--- Volume key cursor control -->
     <string name="volume_rocker_screen_title">Качелька громкости</string>
@@ -388,19 +365,6 @@
     <string name="recents_searchbar_summary_enabled">Панель поиска в меню недавних приложений включена</string>
     <string name="recents_searchbar_summary_disabled">Панель поиска в меню недавних приложений отключена</string>
 
-    <!-- Nav bar customization -->
-    <string name="navigation_bar_buttons">Кнопки и их расположение</string>
-    <string name="navigation_bar_settings_summary">Редактирование и перемещение кнопок панели навигации</string>
-    <string name="navigation_bar_help_text">Для разблокировки панели навигации и начала редактирования коснитесь значка правки.\n\nКоснитесь виртуальной кнопки для изменения функции или удерживайте ее для перемещения.\n\nПосле этого нажмите «Сохранить» для подтверждения изменений или «Восстановить», чтобы вернуть стандартные настройки.</string>
-    <string name="navigation_restore_button_text">Восстановить</string>
-    <string name="navigation_edit_button_text">Изменить</string>
-    <string name="navigation_save_button_text">Сохранить</string>
-    <string name="navigation_bar_reset_message">Удалить текущие настройки и восстановить стандартный набор?</string>
-
-    <!-- Navigation bar cursor -->
-    <string name="navigation_bar_arrow_keys_title">Перемещение курсора</string>
-    <string name="navigation_bar_arrow_keys_summary">Отображать кнопки перемещения курсора влево или вправо при вводе. Кнопка выбора метода ввода отображаться не будет.</string>
-    
     <string name="lockscreen_targets_summary">Настройка ярлыков экрана блокировки</string>
     
     <!-- Qucik unlock -->
