@@ -456,7 +456,6 @@
     <string name="navbar_visibility">Enable navigation bar</string>
     <string name="navigationbar_settings_title">Navigation</string>
     <string name="aosp_navigation_bar">Navigation bar</string>
-    <string name="aosp_navigation_bar_settings">Navigation bar settings</string>
     <string name="navigationbar_settings_summary">Customize navigation style and behavior</string>
     <string name="navbar_general_title">Advanced</string>
     <string name="navigation_bar_left_title">Left-handed mode</string>

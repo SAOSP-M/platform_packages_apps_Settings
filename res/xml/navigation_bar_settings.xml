@@ -5,10 +5,51 @@
     xmlns:settings="http://schemas.android.com/apk/res/com.android.settings"
     android:title="@string/navigation_bar_title">
 
-        <Preference
-            android:key="aosp_navbar_settings"
-            android:fragment="com.android.settings.custom.nav.NavbarSettings"
-            android:title="@string/aosp_navigation_bar" />
+    <SwitchPreference
+        android:key="navbar_visibility"
+        android:title="@string/navbar_visibility" />
+
+    <PreferenceCategory
+        android:key="category_navbar_interface"
+        android:title="@string/navbar_interface_title" >
+
+        <ListPreference
+            android:entries="@array/systemui_navbar_mode_entries"
+            android:entryValues="@array/systemui_navbar_mode_values"
+            android:key="navbar_mode"
+            android:title="@string/navbar_mode" />
+
+        <PreferenceScreen
+            android:key="smartbar_settings"
+            android:title="@string/smartbar_settings_title"
+            android:fragment="com.android.settings.custom.nav.SmartbarSettings" />
+
+        <PreferenceScreen
+            android:key="fling_settings"
+            android:title="@string/fling_settings"
+            android:fragment="com.android.settings.custom.nav.FlingSettings" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:key="category_navbar_general"
+        android:title="@string/navbar_general_title" >
+
+        <PreferenceScreen
+            android:key="pulse_settings"
+            android:title="@string/pulse_settings"
+            android:fragment="com.android.settings.custom.nav.PulseSettings" />
+
+        <com.android.settings.preference.NavbarSizePreference
+            android:key="navigation_bar_size"
+            android:title="@string/navigation_bar_size_title" />
+
+        <com.android.settings.cyanogenmod.SystemSettingSwitchPreference
+            android:key="navigation_bar_left"
+            android:title="@string/navigation_bar_left_title"
+            android:summary="@string/navigation_bar_left_summary"
+            android:defaultValue="false" /> 
+    </PreferenceCategory>
 
 	<PreferenceCategory
 	    android:key="recents_panel"
@@ -19,12 +60,14 @@
             android:title="@string/recents_show_searchbar"
             android:summaryOn="@string/recents_searchbar_summary_enabled"
             android:summaryOff="@string/recents_searchbar_summary_disabled"
+            android:dependency="navbar_visibility"
             android:defaultValue="true" />
 
         <SwitchPreference
             android:key="show_clear_all_recents"
             android:title="@string/show_clear_all_recents_button_title"
             android:summary="@string/show_clear_all_recents_button_summary"
+            android:dependency="navbar_visibility"
 	    android:defaultValue="false" />
 
         <ListPreference

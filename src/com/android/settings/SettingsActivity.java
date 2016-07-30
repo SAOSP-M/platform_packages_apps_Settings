@@ -82,9 +82,9 @@ import com.android.settings.blacklist.BlacklistSettings;
 import com.android.settings.bluetooth.BluetoothSettings;
 import com.android.settings.simpleaosp.DisplayRotation;
 import com.android.settings.simpleaosp.BatteryBarSettings;
+import com.android.settings.simpleaosp.NavigationBarSettings;
 import com.android.settings.cyanogenmod.qs.QSTiles;
 import com.android.settings.custom.nav.FlingSettings;
-import com.android.settings.custom.nav.NavbarSettings;
 import com.android.settings.custom.nav.SmartbarSettings;
 import com.android.settings.dashboard.DashboardCategory;
 import com.android.settings.dashboard.DashboardSummary;
@@ -367,7 +367,7 @@ public class SettingsActivity extends Activity
             BlacklistSettings.class.getName(),
  	    QSTiles.class.getName(),
             BatteryBarSettings.class.getName(),
-            NavbarSettings.class.getName(),
+            NavigationBarSettings.class.getName(),
             FlingSettings.class.getName(),
             SmartbarSettings.class.getName()
     };
